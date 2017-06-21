@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_p"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.getfreerecharge.mpaisafreerecharge.utils.UserAvatar
+                    android:id="@+id/userPic"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="10dp"
+                    android:elevation="10dp"
+                    android:src="@mipmap/ic_user_male_light"
+                    app:border_width="0dp" />
+
+                <ImageButton
+                    android:id="@+id/resendMail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:background="@android:color/transparent"
+                    android:src="@mipmap/ic_email_light" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_p">
+
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/ll_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:clickable="false"
+                android:elevation="10dp"
+                card_view:cardCornerRadius="3dp">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:id="@+id/userNameTv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/editbox_bg"
+                            android:drawableLeft="@mipmap/ic_user"
+                            android:drawablePadding="15dp"
+                            android:gravity="center_vertical"
+                            android:padding="15dp"
+                            android:singleLine="true"
+                            android:text="Name" />
+
+                        <TextView
+                            android:id="@+id/userEmailTv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/editbox_bg"
+                            android:drawableLeft="@mipmap/ic_email"
+                            android:drawablePadding="15dp"
+                            android:gravity="center_vertical"
+                            android:padding="15dp"
+                            android:singleLine="true"
+                            android:text="Email" />
+
+                        <TextView
+                            android:id="@+id/userPhoneTv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/editbox_bg"
+                            android:drawableLeft="@mipmap/ph_num"
+                            android:drawablePadding="15dp"
+                            android:gravity="center_vertical"
+                            android:padding="15dp"
+                            android:singleLine="true"
+                            android:text="mobile" />
+
+                        <ImageView
+                            android:id="@+id/genderIV"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/men1" />
+
+                        <Button
+                            android:id="@+id/editProfileBt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/button_selector3"
+                            android:text="Edit Profile"
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+                </ScrollView>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/ll_edit_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:clickable="false"
+                android:elevation="10dp"
+                android:visibility="gone"
+                card_view:cardCornerRadius="3dp">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/userNameTilP"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true">
+
+                            <EditText
+                                android:id="@+id/userNameP"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@mipmap/ic_user"
+                                android:drawablePadding="5dp"
+                                android:hint="User Name"
+                                android:imeOptions="actionNext"
+                                android:inputType="textCapSentences"
+                                android:singleLine="true" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/userEmailTilP"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/userEmailP"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@mipmap/ic_email"
+                                android:drawablePadding="5dp"
+                                android:hint="Email ID"
+                                android:imeOptions="actionNext"
+                                android:inputType="textEmailAddress"
+                                android:singleLine="true" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/userNumTilP"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/userNumberP"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@mipmap/ph_num"
+                                android:drawablePadding="5dp"
+                                android:hint="Mobile Number"
+                                android:imeOptions="actionDone"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:singleLine="true"
+                                android:text="" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <RadioGroup
+                            android:id="@+id/gRgP"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/maleP"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/male"
+                                android:button="@null" />
+
+                            <RadioButton
+                                android:id="@+id/femaleP"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/female"
+                                android:button="@null" />
+                        </RadioGroup>
+
+                        <Button
+                            android:id="@+id/saveChangesBt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/button_selector3"
+                            android:text="Save Changes"
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+                </ScrollView>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBarProfile"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="30dp"
+            android:elevation="10dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>
